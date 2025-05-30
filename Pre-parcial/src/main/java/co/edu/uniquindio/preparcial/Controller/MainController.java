@@ -3,8 +3,11 @@ package co.edu.uniquindio.preparcial.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainController {
     public void abrirRegistroVehiculo(ActionEvent event) {
@@ -28,18 +31,30 @@ public class MainController {
     }
     // En MainController.java
     @FXML
-    private void abrirGestionCamiones() {
-        cargarVentana("/co/edu/uniquindio/preparcial/view/GestionCamiones.fxml", "Gestión de Camiones");
+    private void filtrarMayor10Toneladas(ActionEvent event) {
+        // Aquí puedes cambiar de escena, abrir una nueva ventana, o mostrar los datos
+        System.out.println("Filtrando conductores con camiones > 10 toneladas...");
     }
 
     @FXML
-    public void filtrarConductores(ActionEvent event) {
-        // Implementación del filtrado de conductores
-        System.out.println("Filtrando conductores con camiones >10t...");
-        // Aquí puedes abrir una nueva ventana o mostrar los resultados en la actual
+    private void abrirVentanaFiltrada() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/preparcial/view/GestionCamion.fxml"));
+            Parent root = loader.load();
+
+            // Obtener el controlador para llamar al método de filtrado
+            GestionCamionController controller = loader.getController();
+            controller.filtrarMayor10Toneladas();
+
+            Stage stage = new Stage();
+            stage.setTitle("Camiones > 10 Toneladas");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-
     private void cargarVentana(String fxml, String titulo) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
@@ -50,5 +65,8 @@ public class MainController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void GestionCamiones(ActionEvent actionEvent) {
     }
 }

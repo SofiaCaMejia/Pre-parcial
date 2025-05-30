@@ -14,7 +14,7 @@
             <Button text="Registrar Paso por Peaje" onAction="#abrirRegistroPasoPeaje"/>
             <Button text="Ver Reporte de Peaje" onAction="#abrirReportePeaje" layoutX="50" layoutY="200"/>
             <Button text="Buscar Recaudador" layoutX="50" layoutY="250" onAction="#abrirBuscarRecaudador"/>
-            <Button text="Filtrar Conductores con Camiones > 10t" onAction="#filtrarConductores"/>
+            <Button text="Filtrar Conductores con Camiones > 10t" onAction="#filtrarMayor10Toneladas"/>
         </VBox>
     </center>
 </BorderPane>

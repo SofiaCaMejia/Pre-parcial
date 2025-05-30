@@ -56,7 +56,7 @@ public class GestionCamionController {
 
 
     @FXML
-    private void filtrarMayor10Toneladas() {
+    void filtrarMayor10Toneladas() {
         camionesTable.setItems(camionesList.filtered(camion ->
                 camion.getCapacidadToneladas() > 10
         ));
@@ -66,4 +66,5 @@ public class GestionCamionController {
     private void mostrarTodos() {
         camionesTable.setItems(camionesList);
     }
+    
 }
