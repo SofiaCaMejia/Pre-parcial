@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.preparcial.Controller.RegistroPasoPeajeController"
+            prefHeight="400.0" prefWidth="600.0" >
+
+    <children>
+        <Label text="Registrar Paso por Peaje" layoutX="110" layoutY="20" style="-fx-font-size: 18px;"/>
+
+        <Label text="Placa del vehículo:" layoutX="40" layoutY="70"/>
+        <TextField fx:id="txtPlaca" layoutX="170" layoutY="70" prefWidth="180"/>
+
+        <Label text="Peaje:" layoutX="40" layoutY="110"/>
+        <ComboBox fx:id="comboPeaje" layoutX="170" layoutY="110" prefWidth="180"/>
+
+        <Label text="Fecha:" layoutX="40" layoutY="150"/>
+        <DatePicker fx:id="dateFecha" layoutX="170" layoutY="150" prefWidth="180"/>
+
+        <Button text="Registrar" layoutX="150" layoutY="210" onAction="#registrarPaso"/>
+    </children>
+
+</AnchorPane>

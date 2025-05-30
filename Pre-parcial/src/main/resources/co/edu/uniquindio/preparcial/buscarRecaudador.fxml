@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.preparcial.Controller.BuscarRecaudadorController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+
+        <Label text="Buscar Recaudador" layoutX="120" layoutY="20" style="-fx-font-size: 18px;" />
+
+        <Label text="Cédula o Nombre:" layoutX="40" layoutY="70" />
+        <TextField fx:id="campoBusqueda" layoutX="150" layoutY="65" prefWidth="200"/>
+
+        <Button text="Buscar" layoutX="150" layoutY="110" onAction="#buscarRecaudador"/>
+
+        <Label text="Nombre:" layoutX="40" layoutY="170" />
+        <Label fx:id="lblNombre" layoutX="150" layoutY="170" />
+
+        <Label text="Cédula:" layoutX="40" layoutY="200" />
+        <Label fx:id="lblCedula" layoutX="150" layoutY="200" />
+
+        <Label text="Peaje Asignado:" layoutX="40" layoutY="230" />
+        <Label fx:id="lblPeaje" layoutX="150" layoutY="230" />
+
+    </children>
+</AnchorPane>

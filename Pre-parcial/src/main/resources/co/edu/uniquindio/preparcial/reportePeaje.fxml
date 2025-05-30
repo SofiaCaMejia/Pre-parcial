@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.preparcial.Controller.ReportePeajeController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <Label text="Reporte de Pasos por Peaje" layoutX="180" layoutY="20" style="-fx-font-size: 20px;"/>
+
+        <TableView fx:id="tablaReporte" layoutX="40" layoutY="60" prefWidth="520" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="colPlaca" text="Placa" prefWidth="120"/>
+                <TableColumn fx:id="colPeaje" text="Peaje" prefWidth="120"/>
+                <TableColumn fx:id="colFecha" text="Fecha" prefWidth="120"/>
+                <TableColumn fx:id="colValor" text="Valor" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.preparcial.Controller.MainController">
+    <top>
+        <Label text="Sistema de Peaje" style="-fx-font-size: 24px; -fx-padding: 10px;" />
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+            <Button text="Registrar Vehículo" onAction="#abrirRegistroVehiculo"/>
+            <Button text="Registrar Paso por Peaje" onAction="#abrirRegistroPasoPeaje"/>
+            <Button text="Ver Reporte de Peaje" onAction="#abrirReportePeaje" layoutX="50" layoutY="200"/>
+            <Button text="Buscar Recaudador" layoutX="50" layoutY="250" onAction="#abrirBuscarRecaudador"/>
+            <Button text="Filtrar Conductores con Camiones > 10t" onAction="#filtrarConductores"/>
+        </VBox>
+    </center>
+</BorderPane>
