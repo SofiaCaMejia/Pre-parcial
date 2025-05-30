@@ -26,11 +26,19 @@ public class MainController {
     private void abrirBuscarRecaudador() {
         cargarVentana("/co/edu/uniquindio/preparcial/buscarRecaudador.fxml", "Buscar Recaudador");
     }
-
-
-    public void filtrarConductores(ActionEvent event) {
-        // Se implementará después
+    // En MainController.java
+    @FXML
+    private void abrirGestionCamiones() {
+        cargarVentana("/co/edu/uniquindio/preparcial/view/GestionCamiones.fxml", "Gestión de Camiones");
     }
+
+    @FXML
+    public void filtrarConductores(ActionEvent event) {
+        // Implementación del filtrado de conductores
+        System.out.println("Filtrando conductores con camiones >10t...");
+        // Aquí puedes abrir una nueva ventana o mostrar los resultados en la actual
+    }
+
 
     private void cargarVentana(String fxml, String titulo) {
         try {

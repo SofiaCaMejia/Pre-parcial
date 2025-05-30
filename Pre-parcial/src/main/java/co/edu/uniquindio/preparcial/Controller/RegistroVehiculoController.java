@@ -29,6 +29,7 @@ public class RegistroVehiculoController {
             default -> null;
         };
 
+
         if (vehiculo != null) {
             SistemaDatos.getInstance().agregarVehiculo(vehiculo);
             mensajeLabel.setText("Vehículo registrado: " + vehiculo.descripcionVehiculo());

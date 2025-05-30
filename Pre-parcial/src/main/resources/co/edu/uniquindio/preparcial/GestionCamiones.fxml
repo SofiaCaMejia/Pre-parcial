@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.preparcial.Controller.GestionCamionController"
+      spacing="10"
+      style="-fx-padding: 15;"
+      prefHeight="400.0" prefWidth="600.0">
+
+    <HBox spacing="10" style="-fx-padding: 0 0 10 0;">
+        <Button text="Mostrar todos" onAction="#mostrarTodos" style="-fx-min-width: 120;"/>
+        <Button text="Filtrar >10 Ton" onAction="#filtrarMayor10Toneladas" style="-fx-min-width: 120;"/>
+    </HBox>
+
+    <TableView fx:id="camionesTable" style="-fx-padding: 5;">
+        <columns>
+            <TableColumn fx:id="placaColumn" text="Placa" minWidth="100" sortable="false"/>
+            <TableColumn fx:id="conductorColumn" text="Conductor" minWidth="150" sortable="false"/>
+            <TableColumn fx:id="capacidadColumn" text="Capacidad (Ton)" minWidth="120" sortable="false"/>
+        </columns>
+    </TableView>
+</VBox>
