@@ -20,14 +20,7 @@ public class GestionCamionController {
     private TableColumn<co.edu.uniquindio.preparcial.model.Camion, Number> capacidadColumn;
 
     private ObservableList<co.edu.uniquindio.preparcial.model.Camion> camionesList = FXCollections.observableArrayList();
-
-    public GestionCamionController(TableView<Camion> camionesTable, TableColumn<Camion, String> placaColumn, TableColumn<Camion, String> conductorColumn, TableColumn<Camion, Number> capacidadColumn, ObservableList<Camion> camionesList) {
-        this.camionesTable = camionesTable;
-        this.placaColumn = placaColumn;
-        this.conductorColumn = conductorColumn;
-        this.capacidadColumn = capacidadColumn;
-        this.camionesList = camionesList;
-    }
+    private boolean yaFiltrado = false;
 
     public GestionCamionController() {
 
@@ -54,17 +47,20 @@ public class GestionCamionController {
     }
 
 
-
     @FXML
-    void filtrarMayor10Toneladas() {
+    public void filtrarMayor10Toneladas() {
+        if (yaFiltrado) return; // Evita ejecutar más de una vez
+        System.out.println("Filtrando conductores con camiones > 10 toneladas...");
         camionesTable.setItems(camionesList.filtered(camion ->
                 camion.getCapacidadToneladas() > 10
         ));
+        yaFiltrado = true;
     }
+
 
     @FXML
     private void mostrarTodos() {
         camionesTable.setItems(camionesList);
     }
-    
+
 }
